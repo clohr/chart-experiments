@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Animated Bar Charts</title>
+  <style>
+    .chart {
+      background: #eee;
+      border: solid 1px #000;
+      max-width: 420px;
+    }
+    rect {
+      fill: steelblue;
+    }
+    button {
+      outline: 0;
+      margin: 10px 0 0 0;
+      border: solid 1px slateblue;
+      padding: 4px 8px;
+      color: slateblue;
+      background: white;
+    }
+    .active {
+      background: slateblue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart" id="myChart"></div>
+
+  <button data-subject="math" class="active">Math</button>
+  <button data-subject="science">Science</button>
+  <button data-subject="language">Language</button>
+
+  <script src="dist/animated-charts.js"></script>
+</body>
+</html>
