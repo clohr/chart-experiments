@@ -42,8 +42,7 @@
   }
 
 </style>
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="./dist/d3.v4.min.js"></script>
 <script>
     /*Copyright (c) 2013-2016, Rob Schmuecker
 All rights reserved.
@@ -91,8 +90,8 @@ var duration = 750;
 var root;
 
 // size of the diagram
-var viewerWidth = $(document).width();
-var viewerHeight = $(document).height();
+var viewerWidth = document.body.clientWidth;
+var viewerHeight = document.body.clientHeight;
 
 var tree = d3.layout.tree()
     .size([viewerHeight, viewerWidth]);
@@ -247,18 +246,18 @@ dragListener = d3.behavior.drag()
         }
 
         // get coords of mouseEvent relative to svg container to allow for panning
-        relCoords = d3.mouse($('svg').get(0));
+        relCoords = d3.mouse(document.querySelectorAll('svg').get(0));
         if (relCoords[0] < panBoundary) {
             panTimer = true;
             pan(this, 'left');
-        } else if (relCoords[0] > ($('svg').width() - panBoundary)) {
+        } else if (relCoords[0] > (document.querySelector('svg').getBoundingClientRect().width - panBoundary)) {
 
             panTimer = true;
             pan(this, 'right');
         } else if (relCoords[1] < panBoundary) {
             panTimer = true;
             pan(this, 'up');
-        } else if (relCoords[1] > ($('svg').height() - panBoundary)) {
+        } else if (relCoords[1] > (document.querySelector('svg').getBoundingClientRect().height - panBoundary)) {
             panTimer = true;
             pan(this, 'down');
         } else {
