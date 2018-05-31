@@ -4,6 +4,6 @@
 `npm install -g elm`
 
 ### Start
-`elm reactor`
+`python -m SimpleHTTPServer 8000`
 
 Open browser to `http://localhost:8000/`
