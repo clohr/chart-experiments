@@ -2,19 +2,19 @@
 <meta charset="utf-8">
 <title>Streamgraph</title>
 <style>
-
-button {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-}
-
+  button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
 </style>
-<button onclick="transition()">Update</button>
+
+<button onclick="transition()">Play</button>
+
 <svg width="960" height="500"></svg>
+
 <script src="./dist/d3.v4.min.js"></script>
 <script>
-
 var n = 20, // number of layers
     m = 200, // number of samples per layer
     k = 10; // number of bumps per layer
@@ -59,11 +59,28 @@ function stackMin(layer) {
 
 function transition() {
   var t;
-  d3.selectAll("path")
-    .data((t = layers1, layers1 = layers0, layers0 = t))
-    .transition()
-      .duration(2500)
-      .attr("d", area);
+  repeat();
+
+  function repeat() {
+    layers0 = stack(d3.transpose(d3.range(n).map(function() { return bumps(m, k); }))),
+    layers1 = stack(d3.transpose(d3.range(n).map(function() { return bumps(m, k); }))),
+    layers = layers0.concat(layers1);
+    
+    x = d3.scaleLinear()
+      .domain([0, m - 1])
+      .range([0, width]);
+
+    y = d3.scaleLinear()
+      .domain([d3.min(layers, stackMin), d3.max(layers, stackMax)])
+      .range([height, 0]);
+
+    d3.selectAll("path")
+      .data((t = layers1, layers1 = layers0, layers0 = t))
+      .transition()
+        .duration(5000)
+        .attr("d", area)
+      .on("end", repeat)
+  }
 }
 
 // Inspired by Lee Byron’s test data generator.
@@ -83,5 +100,4 @@ function bump(a, n) {
     a[i] += x * Math.exp(-w * w);
   }
 }
-
 </script>
