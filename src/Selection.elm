@@ -269,7 +269,7 @@ below system selection =
     case selection of
         Just { start, end } ->
             [ Junk.rectangle system
-                [ Svg.Attributes.fill "#b6b6b61a" ]
+                [ Svg.Attributes.fill "#dddddd" ]
                 start
                 end
                 system.y.min

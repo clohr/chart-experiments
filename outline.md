@@ -20,6 +20,18 @@
 * Discovery
 * Education
 
+### Technology
+* D3
+  * The de-facto standard for JS-based visualization libraries
+* CircosJS
+  * D3-based library to build circular graphs
+  * Original project Circos designed for displaying genomics data, but can be used for any dataset to display relationships between data
+* Elm
+  * Elm Hack Nights have produced a common interest among attendees: learn more about creating visualizations
+  * The host is a core contributor to the language and has multiple connections we can leverage
+  * Pure functional language provides a nicer developer interface vs. writing joins and callbacks in JS
+
+
 ## Examples
 
 ### Interactive Bar Charts
@@ -36,17 +48,16 @@
 
 ### Scatter Plots
 * Helps you find potential relationships between values, and to find outliers in data sets
-* Enable pan and zoom per cluster
 * How could this be applied to Blackfynn:
   * Plot quality of patients selected for clinical trials
  
 ### Elm Charts
-* Elm Hack Nights have produced a common interest among attendees: learn more about creating visualizations
-* The host is a core contributor to the language and has multiple connections we can leverage
-* Pure functional language provides a nicer developer interface vs. writing joins and callbacks in JS
+* Select subset of data
+* Stream graph with Silhouette which shows which objects lie well within their cluster, and which ones are merely somewhere in between clusters
+* Well-thought out APIs
 * How could this be applied to Blackfynn:
-  * Two really good libraries already in existance that can be directly ported for existing chart implementations
-  * Base language provides a nice set of features to help fill in data gaps
+    * Two really good libraries already in existance that can be directly ported for existing chart implementations
+    * Base language provides a nice set of features to help fill in data gaps
 
 ### Radial Layouts
 * Stacked Charts: Used to compare total values across several categories
