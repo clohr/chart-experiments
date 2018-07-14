@@ -20,6 +20,18 @@
 * Discovery
 * Education
 
+## Tufte's Guidelines
+Edward Tufte is considered a leading data visualion expert and professor at Yale in statistics, computer science, and political science. Served as a consultant for the Obama administration as well as for NASA.
+
+Wrote several books including Beautiful Evidence and Visual Display of Quantitative Information.
+
+Some of his guiding principles:
+* induce the viewer to think about the substance rather than about methodology, graphic design, the technology
+* present many numbers in a small space; make large data sets coherent
+* comparison rather than mere description; show causation
+* reveal the data at several levels of detail, from a broad overview to the fine structure
+* best visualizations are nearly always multivariate
+
 ## Examples
 
 ### Interactive Bar Charts
@@ -31,6 +43,7 @@
 ### Stream Graphs
 * Alternative to area charts
 * Good for identifying trends and patterns over time
+* Silhouette: value is a measure of how similar an object is to its own cluster (cohesion) compared to other clusters (separation)
 * How could this be applied to Blackfynn:
   * Graph specific subsets of timeseries data
 
