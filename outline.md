@@ -52,6 +52,7 @@ Some of his guiding principles:
 * Enable pan and zoom per cluster
 * How could this be applied to Blackfynn:
   * Plot quality of patients selected for clinical trials
+  * Show property relationships between Records, could help with data validation
  
 ### Elm Charts
 * Elm Hack Nights have produced a common interest among attendees: learn more about creating visualizations
@@ -68,6 +69,9 @@ Some of his guiding principles:
 * Using a radial design can offer a unique perspective as well as make a large amount of data more accessible to users
 * How could this be applied to Blackfynn: 
   * Visualize relationship table data
+  * Chord layout could be an alternative to the current force graph layout
+  * Show relationships between Models
+  * As data grows, we could add a search input or list component next to the chart that allows users to find a specific Model more quickly
 
 ### Relational Graphs
 * Heirarchy: shows structures and relationships between data
