@@ -20,12 +20,10 @@
 * Discovery
 * Education
 
-## Tufte's Guidelines
-Edward Tufte is considered a leading data visualion expert and professor at Yale in statistics, computer science, and political science. Served as a consultant for the Obama administration as well as for NASA.
+## What Makes a Good Visualization?
+Edward Tufte is considered a leading data visualion expert and professor at Yale in statistics, computer science, and political science. He wrote several books including Beautiful Evidence and Visual Display of Quantitative Information and served as a consultant for the Obama administration as well as for NASA.
 
-Wrote several books including Beautiful Evidence and Visual Display of Quantitative Information.
-
-Some of his guiding principles:
+Tufte's standards for high-quality visualizations:
 * induce the viewer to think about the substance rather than about methodology, graphic design, the technology
 * present many numbers in a small space; make large data sets coherent
 * comparison rather than mere description; show causation
